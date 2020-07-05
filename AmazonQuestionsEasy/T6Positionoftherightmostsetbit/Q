@@ -1,0 +1,14 @@
+In this question we have to write oneline function
+to find out the position of first 1 from right to left,
+in binary representation of integer
+
+so to do this question we have a standard approach and what is that
+
+1. Take two's complement of the given no. as all bits are reverted except the first
+1 from right to left
+2. Do a bit-wise & with the original no, this will return no
+with the required one only
+3. take the log2 of the no, you will get the position-1
+4. Add 1
+
+So lets practice it

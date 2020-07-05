@@ -1,0 +1,6 @@
+Given two rectangles, find the given two rectangles overlap or not
+Rectangle can be represented by two coordinates, top left and bottom right
+l1,r1,l2,r2
+Write a function bool doOverlap(l1,r1,l2,r2) that returns true if the two
+given rectangles overlap
+Rectangles are parallel to the coordinate axis

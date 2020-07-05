@@ -1,0 +1,15 @@
+In this question we are given a array of distinct elements and we are also given one value of x and if we find any
+pair in the array whose product is x then the answer is YES otherwise NO
+So how to do it
+1. A simple method is to just use two nested for loops and if the product is equal to the x then yes and break
+otherwise NO
+but that will obviously take O(n*n)
+so let me do practice with this O(n*n) method.
+In this method we see that a*b that is happening so if we sort the array first
+so not getting try only the naive in practice
+
+so obviously we tried but again and again
+some errors are popping so lets go the most wonderful solution
+we will learn it no other option
+
+See Ans for details

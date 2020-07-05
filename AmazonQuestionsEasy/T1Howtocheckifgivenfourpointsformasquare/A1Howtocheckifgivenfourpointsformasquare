@@ -1,0 +1,69 @@
+//So here we will discuss the answer of gfg nicely
+//so first let us see some discussions
+
+Solution 1:- Finding distances and then sorting
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+  int t;
+  cin>>t;
+  while(t--){
+    int x1,y1,x2,y2,x3,y3,x4,y4;
+    cin>>x1>>y1>>x2>>y2>>x3>>y3>>x4>>y4;;
+    int d[6];
+    d[0] = sqrt(pow(x1-x2,2)+pow(y1-y2,2));
+    d[1] = sqrt(pow(x1-x3,2)+pow(y1-y3,2));
+    d[2] = sqrt(pow(x1-x4,2)+pow(y1-y4,2));
+    d[3] = sqrt(pow(x2-x3,2)+pow(y2-y3,2));
+    d[4] = sqrt(pow(x2-x4,2)+pow(y2-y4,2));
+    d[5] = sqrt(pow(x3-x4,2)+pow(y3-y4,2));
+
+    sort(d,d+6)
+    if(d[0]==d[1] and d[1]==d[2] and d[2]==d[3] and d[3]==d[0] and d[5]!=d[4] and d[5]!=0 and d[4]!=0){
+      cout<<"Yes"<<endl;
+    }
+    else{
+    cout<<"No"<<endl;
+    }
+  }
+  return 0;
+}
+// But let us check the solution from geeks for geeks also as it is standard Solution
+
+//Solution from geeks for geeks
+#include<iostream>
+using namespace std;
+struct Point{
+  int x,y;
+};
+int distSq(Point p, Point q){
+  return (p.x-q.x)*(p.x-q.x) + (p.y-q.y)*(p.y-q.y);
+}
+
+bool isSquare(Point p, Point q){
+  int d2 = distSq(p1,p2);
+  int d3 = distSq(p1,p3);
+  int d4 = distSq(p1, p4);
+
+  if(d2 == 0 || d3==0 || d4==0)
+    return false;
+
+  if(d2==d3 and 2*d2 == d4 and && 2*distsq(p2,p4) == distSq(p2,p3)){
+    return true;
+  }
+  if(d2 == d4 and 2*d2 == d3 and 2*distSq(p2,p3)==distSq(p2,p4)){
+    return true;
+  }
+  if(d3==d4 and 2*d3==d2 and 2*distSq(p3,p2)==distSq(p3,p4)){
+    return true;
+  }
+  return false;
+}
+
+10:10:40
+laptop
+11:15
+30-40
+4:30

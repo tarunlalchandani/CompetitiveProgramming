@@ -1,0 +1,39 @@
+So i will perform diff questions of array topic and then
+gradually we will get mastered in this Topic
+The topics in Array are:-
+
+But before that lets study little more theory on the following Topics
+
+1. Introduction to Pointers in C/C++
+(a) We need to understand that the element is stored in
+the memory and CPU uses lookup table to got to the
+variable and does the required operations
+
+So pointers are nothing but variables which store the address
+of another variables
+
+int*a = &b;
+
+thats it this is called pointer
+
+2. Arrays in Programming Fundamentals
+this we already discussed
+
+3. Pointers and Arrays this also we discussed
+Note here you cannot do A = P because the base address of
+array cannot be updated by the pointer
+
+4. Pointers and 2D Arrays
+so in that
+int*p = B ( where B is a 2D array)//error
+so we write int (*p)[3] = B
+then correct as if B contains 3 rows
+So B[1] means &B[1][0]
+As a general formulae we have
+B[i][j] =  *(B[i]+j) = *(*(B+i)+j)
+
+4. Array implementation detail
+int A[1000];
+int* A = (int *)malloc(1000*sizeof(int))
+
+but you should use vector as you have its practice more

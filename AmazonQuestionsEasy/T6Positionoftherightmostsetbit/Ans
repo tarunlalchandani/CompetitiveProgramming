@@ -1,0 +1,63 @@
+Using approach of log 2
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+  int t,n;
+  cin>>t;
+  while(t--){
+    cin>>n;
+    nr = -1*n;
+    if(nr==n) cout<<0;
+    else{
+      int x = log2(n&nr);
+      cout<<x+1<<endl;
+    }
+  }
+  return 0;
+}
+
+Now some other approach is
+Using ffs() function
+it returs the index of least significant
+bit. The indexing starts in ffs() function
+from 1
+so just return ffs(n);
+
+Another approach
+Using XOR and & operator
+Initialize m as 1 as check its XOR with the bits
+starting from the rightmost bit. Left shift m by one
+till we find the first set bit gives a number
+when we perform a & operation with m
+
+Code:
+#include<bits/stdc++.h>
+using namespace std;
+int PositionRightmostSetbit(int n){
+  int position = 1;
+  int m = 1;
+  while(!(n&m)){
+    m = m<<1;
+    position++;
+  }
+  return position;
+}
+
+Last solution approach by left shift <<
+Initialize pos with 1, iterate up to INT_SIZE(Here 32)
+and check whether bit is set or not, if bit is set then break the loop, else increment the
+pos
+
+Code:
+#include<bits/stdc++.h>
+using namespace std;
+int Right_most_setbit(int num){
+  int pos = 1;
+  for(int i=0;i<INT_SIZE;i++){
+    if(!(num&(1<<i)))
+      pos++;
+    else
+      break;
+  }
+  return pos;
+}

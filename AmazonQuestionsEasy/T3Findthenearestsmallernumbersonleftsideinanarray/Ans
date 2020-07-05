@@ -1,0 +1,47 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void printPrevSmaller(int arr[], int n){
+  cout<<"_, ";
+  for(int i=1;i<n;i++){
+    int j;
+    for(j=i-1;j>=0;j--){
+      if(arr[j]<arr[i]){
+        cout<< arr[j] <<", ";
+        break;
+      }
+    }
+    if(j==-1)
+      cout<<"_, ";
+  }
+}
+
+int main()
+{
+  int arr[] = {1,3,0,2,5};
+  int n = sizeof(arr)/sizeof(arr[0]);
+  printPrevSmaller(arr,n);
+  return 0;
+}
+
+
+Now approach 2nd
+Using O(n) approach
+we are using stack here
+
+Algorithm:
+1) Create a new empty stack S
+2) For every element 'arr[i]' in the input sequence 'arr[]',
+    where 'i' goes from 0 to n-1
+    a) while S is nonempty and the top element of S is
+      greater than or equal to 'arr[i]':
+      pop S
+    b) if S is empty:
+        'arr[i]' has no preceding smaller value
+    c) else:
+            the nearest smaller value to 'arr[i]' is
+            the top element of S
+
+    d) push 'arr[i]' onto S
+
+so let us code it

@@ -1,0 +1,12 @@
+So in this question we are given a
+string and we need to print all the strings
+that can be made by placing spaces(zero or one) in
+between them
+
+
+we will just take 000
+001
+010
+011
+and we will discard 111 thats all we have to
+do its a simple question lets do it and practice

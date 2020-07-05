@@ -1,0 +1,18 @@
+So in this section
+we will not go very deep in sorting
+the array but we will see how to use the library
+functions of sorting using STL
+
+1. method
+
+sort(arr,arr+n);
+
+2 To sort in decreasing order
+sort(arr,arr+n, greater<int>() )
+
+Now if you want to sort intervals or some custom use some function
+
+bool compareInterval(interval i1, interval i2){
+return (i1.start<i2.start)
+}
+sort(arr,arr+n,compareInterval)

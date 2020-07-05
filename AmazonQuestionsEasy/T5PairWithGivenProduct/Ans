@@ -1,0 +1,34 @@
+1. Create an empty hash table
+2. Traverse array elements and do following for every element arr[i]
+  -> if arr[i] is 0 and x is also 0, return true, else ignore arr[i]
+  -> if x%arr[i] is 0 and x/arr[i] exists in table, return true
+  -> insert arr[i] into the hash table
+3. Return false
+
+so now lets see codewise
+
+#include<bits/stdc++.h>
+using namespace std;
+
+bool isProduct(int arr[],int n, int x){
+  if(n<2)
+    return false;
+
+  unordered_set<int> s;
+
+  for(int i=0;i<n;i++){
+    if(arr[i]==0){
+      if(x==0)
+        return true;
+      else
+        continue;
+    }
+    if(x%arr[i]==0){
+      if(s.find(x/arr[i])!=s.end())
+        return true;
+      // Insert arr[i]
+      s.insert(arr[i]);
+    }
+  }
+  return false;
+}

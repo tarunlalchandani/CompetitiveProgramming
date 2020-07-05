@@ -1,0 +1,30 @@
+Array is a collection of multiple items of same type that are stored together in contiguous
+memory locations.
+So why we store it in contiguous memory locations
+Because it makes it easier to calculate the position
+of each element by simply adding an offset to a base value
+
+base value =?
+The memory location of the first element in the array
+
+Introduction things
+1. How to declare in c/c++
+int arr[10];
+
+2. Array declaration by initializing elements
+
+int arr[] = {10,20,30,40};
+
+3. Another way
+int arr[6] = {10,20,30,40};
+the compiler will store {10,20,30,40,0,0}
+
+4. Accessing array element
+nth element a[n-1]
+
+5. No index out of bound checking means if you declare
+int arr[2]
+but printed arr[5] it will print a garbage value and not give
+error
+
+Next we will study about Vectors

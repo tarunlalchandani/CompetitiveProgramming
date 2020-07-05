@@ -1,0 +1,32 @@
+What is this question
+
+4 points in a plane and their coordinates
+find whether they form a square or not
+
+So how to do this problem
+I got it it is very simple problem by mathematics
+
+We just solve the expressions
+(But i was thinking that will work but unfortunately that is not working)
+
+because this idea is not correct
+Flaw in the idea:- As the points may be points in the diagonals so they
+are not all equal that is the flaw in it.
+
+Now we need to find some other idea
+Now let us dig on the correct idea
+1. Pick any point and calculate its distance from the rest
+of the points.
+2. Let the picked point be 'p'.
+3. To form a square the distance of two points must be
+sma from p, let the distance be 'd'.
+4. The distance from one point must be different from that
+d and must be equal to root2(d).
+But above condition is not good enough as the point with different distance
+can be on the other side. We also need to check that q
+is at the same distance from 2 other points and this
+distance is the same as d.
+
+So that is the idea.
+So lets do it
+So we tried and it was going so complicated to handle so let us see now the solution

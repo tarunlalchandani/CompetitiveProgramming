@@ -1,0 +1,14 @@
+So what is data structures and why we have to learn them for the placements and interviews
+
+So basically we have to store data in such a format so that we can easily handle it for diff
+problems which we are solving for example
+
+Array can be used when we want data in order of increasing index
+Stack can be used when we want data to get pushed and pop from the top only
+Queue can be used when we want data to get pushed from one side and pop from another end of block
+of sequential memory
+Trees are used for fast searching things like that
+Graphs used for diff problems
+and much more
+
+So data structure is a way to organize data so that it becomes easier to handle the data

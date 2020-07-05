@@ -1,0 +1,76 @@
+Vector comes in STL library in c++
+#include<vector>
+vector<int> x;
+
+No need to specify size, as it is dynamic
+We can also resize it using x.resize(<size>)
+
+Some Related Theory
+
+1. How to initialize multidimensional array in c/c++
+a[][][2] = {{{1,2},{3,4}},{{5,6},{7,8}}};
+This gives a error
+Because we can only keep atmost one dimension empty not more than
+that
+
+But this type works
+a[][2][2] = {{{1,2},{3,4}},
+              {{5,6},{7,8}}};//works
+
+and also
+int a[][2] = {{1,2},{3,4}};
+
+means for array of n dimension atleast you should define n-1 dimensions and then
+you can initialize such an array accordingly.
+
+2. How to print size of array parameter in c++?
+
+so that is sizeof(arr) where array is arr[]
+so sizeof(arr) will  return the <type of array(how many bytes)>*No. of elements
+but if you print it after passing to a function
+
+So it will print 8 that is the size of a pointer and not 40
+The program for this is
+
+#include<iostream>
+using namespace std;
+
+void findsize(int arr[]){cout<<sizeof(arr)<<endl}
+int main(){
+  int a[10];
+  cout<< sizeof(a) << " ";
+  findsize(a);
+  return 0;
+}
+
+So the question arises that if you want to find the size of array in a function
+so what you will do so do this
+template<size_t n>
+void findSize( int (&arr)[n])
+  return sizeof(int)*n;
+and call from main as
+main(){
+  int a[10];
+  findSize(a);
+  return 0;
+}
+so now if you do sizeof(arr) it will print 40 because you took
+array this type with reference and not pointer so basically the same array
+
+But now again what if if you want to write a generic function for all types of arrays
+#include<iostream>
+using namespace std;
+
+template <typename T, size_t n>
+void findsize(T (&arr)[n])
+{
+  cout<< sizeof(T)*n <<endl;
+}
+
+Here if we call the function from main then after the name
+of the function we pass things that are arguments
+and argumets are stored in parameters in the function
+
+the size for a c++ array can be
+found by arr.size()
+Hare Krsna

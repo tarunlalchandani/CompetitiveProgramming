@@ -1,0 +1,46 @@
+So here we are going to find the sum of elements of an
+array
+template< size_t n>
+int sum(int (&arr)[n]){
+  int sum = 0;
+  for(int i=0;i<n;i++){
+    sum += arr[i];
+  }
+  return sum;
+}
+
+Or method 2 using C++ STL
+So there is a library called numeric which provides function
+accumulate
+template<size_t n>
+int sum(int (&a)[n])
+{
+  int sum = 0;
+  return accumulate(a,a+n,sum);
+}
+alsof if using vector we can find sum by
+int sum(vector<int>& v){
+  int sum = 0;
+  return accumulate(v.begin(),v.end(),sum);
+}
+
+The accumulate can also be used to do some operation which
+results in accumulative sum like product of elements
+
+with syntax
+return accumulate(arr,arr+n, product, productfunc)
+
+where productfunc is
+int productfunc(int x, int y){
+  return x*y;
+}
+we can also use partial sums with the same syntax
+partial_sum(a,a+n,sum,myfun)
+sum should be a empty array of size n and myfun is the function like
+in normal case partial sum will give the partial sum of all
+the set of values and assign it to the another array b
+myfun(int x,int y){
+  return 2*x+y
+}
+so the last element 2 times and current element one time
+definition of partial sum in this case

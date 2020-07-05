@@ -1,0 +1,20 @@
+Check if a string can be obtained by rotating another string 2 places
+Given two strings, the task is to find a string can be
+obtained by rotating another string two places
+
+so let us try ourselves first
+
+I did some direct code but then came the time limit error
+so i have to understand first the contraint and the
+time complexity in which i have to achieve the task
+
+so test cases are 50
+and length is 100
+so O(n) is around 100*50*4 = 20000 but then also it is showing
+time limit error
+why?? it means somewhere the loop is going to infinite lets check in
+local compiler
+
+So we had put i++ and j++ outside while that was the problem
+
+so ok fine we got the solution

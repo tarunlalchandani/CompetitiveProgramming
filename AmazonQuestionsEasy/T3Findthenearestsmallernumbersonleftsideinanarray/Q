@@ -1,0 +1,31 @@
+So we have asked to find the nearest small of an integer
+so yes there is a  approach to check whether that number is
+smallest then the smallest found till now. If no then _ otherwise
+we can loop through the number and 1 to find the nearest smaller number
+so what is the time complexity of this process
+
+so in worst case it goes O(n^(2
+
+but in question it is written that expected time complexity is O(n)
+so now yes we are repeating the step by O(n2)
+because if we are searching
+
+So we need to use stack in this question
+We can see how the stack can reduce the complexity
+
+#include<bits/stdc++.h>
+
+So we are not able to do in O(n) and we lack the thinking how a
+stack will be used
+stack is first in last out so we have to see how to use it
+
+METHOD 1
+Using two nested loops
+So try by using two nested loops first let us go
+
+But the question is easier then the problem so we did
+it easily but still the speed is very slow as compared
+
+So let go to the discussions
+
+Now lets go to the step by step solution
